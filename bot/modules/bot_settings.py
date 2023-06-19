@@ -163,9 +163,6 @@ async def load_config():
     else:
         LEECH_SPLIT_SIZE = int(LEECH_SPLIT_SIZE)
 
-    SAFE_MODE = environ.get('SAFE_MODE', '')
-    if len(SAFE_MODE) == 0:
-        SAFE_MODE = ''
   
     STATUS_UPDATE_INTERVAL = environ.get('STATUS_UPDATE_INTERVAL', '')
     if len(STATUS_UPDATE_INTERVAL) == 0:
