@@ -377,11 +377,6 @@ MIRROR_LOG_ID = environ.get('MIRROR_LOG_ID', '')
 if len(MIRROR_LOG_ID) == 0:
     MIRROR_LOG_ID = ''
 
-SAFE_MODE = environ.get('SAFE_MODE', '')
-if len(SAFE_MODE) == 0:
-    log_warning('SAFE_MODE Is Not Enabled')
-    SAFE_MODE = ''
-
 BOT_PM = environ.get('BOT_PM', '')
 BOT_PM = BOT_PM.lower() == 'true'
 
