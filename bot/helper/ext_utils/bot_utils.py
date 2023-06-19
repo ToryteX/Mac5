@@ -377,7 +377,11 @@ def arg_parser(items, arg_base):
         arg_base['link'] = items[0]
     return arg_base
 
-
+if config_dict['SAFE_MODE']:
+                msg += f"<b>{download.status()}: Safe Mode Enabled</b>"
+            else:
+                msg += f"<b><a href='{download.message.link}'>{download.status()}</a>: </b>"
+                msg += f"<code>{escape(str(download.name()))}</code>"
 
 async def get_content_type(url):
     async with ClientSession(trust_env=True) as session:
