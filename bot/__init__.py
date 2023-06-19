@@ -383,7 +383,6 @@ if len(SAFE_MODE) == 0:
     SAFE_MODE = ''
 else:
     BOT_PM = 'True'
-    FORCE_BOT_PM = 'True'
     SAFE_MODE = 'True'
 
 BOT_PM = environ.get('BOT_PM', '')
