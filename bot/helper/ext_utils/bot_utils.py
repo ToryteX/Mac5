@@ -420,6 +420,8 @@ async def download_image_url(url):
 async def format_filename(file_, lprefix, lsuffix, lremname, lcaption, dirpath):
     prefile_ = file_
     # SD-Style V2 ~ WZML-X
+    if file_.startswith('www'):
+        file_ = ' '.join(file_.split()[1:])
     if lremname:
         if not lremname.startswith('|'):
             lremname = f"|{lremname}"
